@@ -13,7 +13,9 @@ export const AppBar: FC = (props) => {
       <div className="navbar flex flex-row md:mb-2 shadow-lg bg-neutral text-neutral-content">
         <div className="navbar-start">
           <div className="hidden sm:inline w-22 h-22 md:p-2">
-            <svg
+            <img width="200px" src='sol-deploy.png' />
+            {/* <p className='font-sans text-2xl font-bold'>SOL DEPLOY</p> */}
+            {/* <svg
               width="100%"
               height="22"
               viewBox="0 0 646 96"
@@ -70,24 +72,41 @@ export const AppBar: FC = (props) => {
                   <rect width="646" height="96" fill="white" />
                 </clipPath>
               </defs>
-            </svg>
+            </svg> */}
           </div>
         </div>
 
         {/* Wallet & Settings */}
         <div className="navbar-end">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="orange" className="w-6 h-6 mr-1">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg>
+
           <Link href="/">
-            <a className="mr-8">Token Creator</a>
+            <a className="mr-8">Dashboard</a>
           </Link>
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="orange" className="w-6 h-6 mr-1">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+</svg>
+          <Link href="/mint">
+            <a className="mr-8">Mint Token</a>
+          </Link>
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="orange" className="w-6 h-6 mr-1">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+</svg>
+
           <Link href="/update">
             <a className="mr-4">Update Metadata</a>
           </Link>
-          <Link href="/uploader">
+          {/* <Link  href="/uploader">
             <a className="mr-8">Upload Metadata</a>
           </Link>
-          <Link href="/metadata">
+          <Link  href="/metadata">
             <a className="mr-4">Token Metadata</a>
-          </Link>
+          </Link> */}
           <div className="dropdown">
             <div tabIndex={0} className="btn btn-square btn-ghost text-right">
               <svg

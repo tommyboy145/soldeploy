@@ -1,3 +1,5 @@
+export { DashboardView } from "./dashboard";
+export { MintView } from "./mint";
 export { HomeView } from "./home";
 export { MetadataView } from './metadata';
 export { UploaderView } from './uploader';
