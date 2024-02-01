@@ -17,7 +17,26 @@ import { notify } from "../utils/notifications";
 
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const { autoConnect } = useAutoConnect();
-    const network = WalletAdapterNetwork.Devnet;
+
+  
+
+    //I'm setting the user's selected network on the main page and updating the value in .ENV
+    var network = null;
+
+    if(process.env.SELECTED_NETWORK == "Mainnet") {
+        network = WalletAdapterNetwork.Mainnet;
+    }
+
+    if(process.env.SELECTED_NETWORK == "Testnet") {
+        network = WalletAdapterNetwork.Testnet;
+    }
+
+    if(process.env.SELECTED_NETWORK == "Devnet") {
+        network = WalletAdapterNetwork.Devnet;
+    }
+
+
+
     const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
     const wallets = useMemo(

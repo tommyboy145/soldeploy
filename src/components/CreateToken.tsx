@@ -102,7 +102,7 @@ export const CreateToken: FC = () => {
 
 
     //Consider error success message here.
-
+    console.log("Creating on: " + process.env.SELECTED_NETWORK);
 
   }, [publicKey, connection, sendTransaction]);
 
